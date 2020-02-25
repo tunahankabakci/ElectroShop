@@ -1,0 +1,10 @@
+npm init -y
+npm install express
+npm isntall mongoose
+npm install nodemon
+npm install body-parser
+npm install bcryptjs
+npm install validator
+npm install jsonwebtoken
+npm install env-cmd
+npm install mongodb
