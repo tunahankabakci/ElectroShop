@@ -33,6 +33,7 @@
     "slick-carousel": "^1.8.1",
     "tilt.js": "^1.2.1",
     "tslib": "^1.10.0",
+    "validator": "^12.2.0",
     "zone.js": "~0.10.2"
   },
   "devDependencies": {

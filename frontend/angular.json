@@ -44,7 +44,8 @@
               "./node_modules/slick-carousel/slick/slick.min.js",
               "./node_modules/nouislider/distribute/nouislider.min.js",
               "./node_modules/tilt.js/dest/tilt.jquery.min.js",
-              "./node_modules/alertifyjs/build/alertify.min.js"
+              "./node_modules/alertifyjs/build/alertify.min.js",
+              "./node_modules/validator/validator.min.js",
             ]
           },
           "configurations": {

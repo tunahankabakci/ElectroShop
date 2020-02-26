@@ -1,0 +1,248 @@
+/*----------------------------*\
+	General
+\*----------------------------*/
+.bg{
+  background-color: #eeeeee;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+}
+
+.container{
+  background-color: #FFFFFF;
+  border-radius: 25px;
+}
+
+
+/*----------------------------*\
+	Form Group
+\*----------------------------*/
+.form-group{
+  position: relative;
+}
+
+h1 {
+  color: #2b2d42;
+  font-weight: 700;
+  margin: 0 0 10px;
+}
+
+label a {
+  color: #2b2d42;
+  font-weight: 500;
+  -webkit-transition: 0.2s color;
+  transition: 0.2s color;
+}
+
+label a:hover,
+label a:focus {
+  color: #d10024;
+  text-decoration: none;
+  outline: none;
+}
+
+
+.login-form input:focus + .fa,
+.login-form input:focus + .fas {
+  color: #d10024;
+}
+
+.login-form .ico {
+  position: absolute;
+  top: 0;
+  left: 19px;
+  line-height: 52px;
+  color: #2b2d42;
+  z-index: 100;
+  font-size: 16px;
+}
+
+.login-form .input-lg {
+  font-size: 16px;
+  height: 52px;
+  padding: 10px 25px;
+  border-radius: 40px;
+  background-color: #eeeeee;
+  border: 0px solid #4a525f;
+  border-left: 45px solid #93a5ab;
+  color: #4a525f;
+}
+
+.login-form input:focus {
+  border-left: 45px solid #eee;
+}
+
+
+
+.btn {
+  display: inline-block;
+  padding: 12px 30px;
+  background-color: #d10024;
+  border: none;
+  border-radius: 40px;
+  color: #fff;
+  font-weight: 700;
+  text-align: center;
+  -webkit-transition: 0.2s all;
+  transition: 0.2s all;
+}
+
+.btn:focus,
+.btn:hover,
+.btn.active,
+.btn.active:hover,
+.btn:active:hover,
+.btn:active:focus,
+.btn:active {
+  background-color: #d10024;
+  border-color: #d10024;
+  box-shadow: 0px 5px 35px -5px #d10024;
+  text-shadow: 0 0 5px #fff;
+  color: #fff;
+  outline: none;
+}
+
+.form-control:focus {
+  box-shadow: none !important;
+}
+
+/*----------------------------*\
+	Social Login Buttons
+\*----------------------------*/
+
+.button {
+  width: auto;
+  display: inline-block;
+  padding: 0 18px 0 6px;
+  border: 0 none;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: all 250ms linear;
+}
+.button:hover {
+  text-decoration: none;
+}
+
+.button--social-login {
+  margin-bottom: 12px;
+  margin-right: 12px;
+  color: white;
+  height: 50px;
+  line-height: 46px;
+  position: relative;
+  text-align: left;
+}
+.button--social-login .icon {
+  margin-right: 12px;
+  font-size: 24px;
+  line-height: 24px;
+  width: 42px;
+  height: 24px;
+  text-align: center;
+  display: inline-block;
+  position: relative;
+  top: 4px;
+  border-right: none !important;
+}
+.button--social-login .icon:before {
+  display: inline-block;
+  width: 40px;
+}
+.button--social-login .icon:after {
+  content: "";
+}
+
+.button--facebook {
+  background-color: #4b70ab;
+  border: 1px solid #3b5988;
+}
+.button--facebook .icon {
+  border-right: 1px solid #3b5988;
+}
+.button--facebook .icon:after {
+  border-right: 1px solid #6b8bbe;
+}
+.button--facebook:hover {
+  background-color: #436499;
+}
+
+.button--googleplus {
+  background-color: #dd4b39;
+  border: 1px solid #c23321;
+}
+.button--googleplus .icon {
+  border-right: 1px solid #c23321;
+}
+.button--googleplus .icon:after {
+  border-right: 1px solid #e47365;
+}
+.button--googleplus:hover {
+  background-color: #d73925;
+}
+
+.button--twitter {
+  background-color: #3b94d9;
+  border: 1px solid #257abc;
+}
+.button--twitter .icon {
+  border-right: 1px solid #257abc;
+}
+.button--twitter .icon:after {
+  border-right: 1px solid #66abe1;
+}
+.button--twitter:hover {
+  background-color: #2988d2;
+}
+
+
+/*----------------------------*\
+	Validate Alert
+\*----------------------------*/
+.alert-validate::before {
+  content: attr(data-validate);
+  position: absolute;
+  max-width: 70%;
+  background-color: white;
+  border: 1px solid #c80000;
+  border-radius: 13px;
+  padding: 4px 25px 4px 10px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  right: 8px;
+  pointer-events: none;
+  font-family: FontAwesome;
+  color: #c80000;
+  font-size: 13px;
+  line-height: 1.4;
+  text-align: left;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: opacity 0.4s;
+  -o-transition: opacity 0.4s;
+  -moz-transition: opacity 0.4s;
+  transition: opacity 0.4s;
+}
+
+.alert-validate::after {
+  content: "\f06a";
+  font-family: FontAwesome;
+  display: block;
+  position: absolute;
+  color: #c80000;
+  font-size: 15px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  right: 13px;
+}
+
+.alert-validate:hover:before {
+  visibility: visible;
+  opacity: 1;
+}
