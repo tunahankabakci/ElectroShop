@@ -1,0 +1,107 @@
+<header>
+    <!-- MAIN HEADER -->
+    <div id="header">
+        <!-- container -->
+        <div class="container">
+            <!-- row -->
+            <div class="row">
+                <!-- LOGO -->
+                <div class="col-lg-3">
+                    <div class="header-logo">
+                        <a href="#" class="logo">
+                            <img src="../../../assets/logo.png" alt="logo">
+                        </a>
+                    </div>
+                </div>
+                <!-- /LOGO -->
+
+                <!-- SEARCH BAR -->
+                <div class="col-lg-6">
+                    <div class="header-search">
+                        <form class="form-inline">
+                            <span class="fa fa-search form-control-feedback"></span>
+                            <input class="input" placeholder="  Search for anything" id="searchInput">
+                            <button class="search-btn">Search</button>
+                        </form>
+                    </div>
+                </div>
+                <!-- /SEARCH BAR -->
+
+                <!-- ACCOUNT -->
+                <div class="col-lg-3 clearfix d-flex justify-content-center">
+                    <div class="header-ctn d-flex">
+                        <!-- Wishlist -->
+                        <div>
+                            <a href="#">
+                                <i class="far fa-heart"></i>
+                                <span>Your Wishlist</span>
+                                <div class="qty">1</div>
+                            </a>
+                        </div>
+                        <!-- /Wishlist -->
+
+                        <!-- Cart -->
+                        <div class="dropdown">
+                            <a href="#">
+                                <i class="fa fa-shopping-cart"></i>
+                                <span>Your Cart</span>
+                                <div class="qty">3</div>
+                            </a>
+                        </div>
+
+                        <!-- /Cart -->
+
+
+                        <!-- User -->
+                        <div>
+                            <a href="/profile">
+                                <i class="far fa-user"></i>
+                                <span>Your Account</span>
+                                <div class="qty">2</div>
+                            </a>
+                        </div>
+                        <!-- /User -->
+
+                        <!-- Menu Toogle -->
+                        <div class="menu-toggle">
+                            <a type="button" (click)="showOrHideResponsiveNav()">
+                                <i class="fa fa-bars"></i>
+                                <span>Menu</span>
+                            </a>
+                        </div>
+                        <!-- /Menu Toogle -->
+                    </div>
+                </div>
+                <!-- /ACCOUNT -->
+            </div>
+            <!-- row -->
+        </div>
+        <!-- container -->
+    </div>
+    <!-- /MAIN HEADER -->
+</header>
+
+
+<!-- NAVIGATION -->
+<nav class="navbar navbar-expand-lg" id="navigation">
+    <!-- container -->
+    <div class="container">
+        <!-- responsive-nav -->
+        <div id="responsive-nav">
+            <!-- NAV -->
+            <ul class="navbar-nav mr-auto main-nav">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Laptops</a></li>
+                <li><a href="#">Smartphones</a></li>
+                <li><a href="#">Tablets</a></li>
+                <li><a href="#">Cameras</a></li>
+                <li><a href="#">Televisions</a></li>
+                <li><a href="#">Accessories</a></li>
+            </ul>
+            <!-- /NAV -->
+        </div>
+        <!-- /responsive-nav -->
+    </div>
+    <!-- /container -->
+</nav>
+<!-- /NAVIGATION -->
