@@ -13,8 +13,7 @@ import { ValidateEmail, ValidatePassword } from 'src/app/helpers/validator';
 })
 export class LoginComponent implements OnInit {
   loginForm: FormGroup;
-  submitted = false;
-  returnUrl: string;
+
 
   constructor(
     private formBuilder: FormBuilder,
@@ -39,7 +38,6 @@ export class LoginComponent implements OnInit {
   get f() { return this.loginForm.controls; }
 
   onSubmit() {
-    this.submitted = true;
     this.checkValidate()
     // stop here if form is invalid
     if (this.loginForm.invalid) {

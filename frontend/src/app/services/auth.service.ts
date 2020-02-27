@@ -23,17 +23,17 @@ export class AuthService {
 
 
 
-  login(email,password) {
+  login(email, password) {
     let headers = new HttpHeaders()
     headers = headers.append("Content-Type", "application/json")
-    this.http.post<any>(this.path + `/users/login`, {email,password}, { headers: headers }).subscribe((data) => {
+    this.http.post<any>(this.path + `/users/login`, { email, password }, { headers: headers }).subscribe((data) => {
       if (data['token'] && data['user']) {
         localStorage.setItem('currentUser', JSON.stringify(data['user']));
         localStorage.setItem('currentUserToken', JSON.stringify(data['token']));
         this.currentUserSubject.next(data['user']);
         alertify.success('Succesfully login. Redirecting to homepage!');
         setTimeout(() => {
-          this.router.navigateByUrl("") //homepage
+          this.router.navigate(['/']);
         }, 2500)
       }
     }, (error) => {
@@ -41,14 +41,22 @@ export class AuthService {
     })
   }
 
-  register(firstname,lastname,username,email,password) {
+  register(user) {
     let headers = new HttpHeaders()
     headers = headers.append("Content-Type", "application/json")
-    this.http.post(this.path + `/users/register`, {firstname,lastname,username,email,password}, { headers: headers }).subscribe()
-    alertify.success('Succesfully register. Redirecting to login page!');
-    setTimeout(() => {
-      window.location.reload();
-    }, 2500)
+    this.http.post(this.path + `/users/register`, user, { headers: headers }).subscribe((data) => {
+      //if get data alert and save local storage
+      alertify.success('Succesfully Registered. Redirecting to homepage!');
+      localStorage.setItem('currentUser', JSON.stringify(data['user']));
+      localStorage.setItem('currentUserToken', JSON.stringify(data['token']));
+      setTimeout(() => {
+        this.router.navigate(['/']);
+      }, 2500)
+    }, (error) => {
+      alertify.error('Email allready taken');
+    })
+
+    
   }
 
   get token() {
@@ -63,7 +71,7 @@ export class AuthService {
     return this.currentUserSubject.value;
   }
 
-  logout(){
+  logout() {
     localStorage.removeItem("currentUser")
     localStorage.removeItem("currentUserToken")
   }

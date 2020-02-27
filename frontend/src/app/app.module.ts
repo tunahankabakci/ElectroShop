@@ -9,6 +9,7 @@ import { HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
 import { JwtInterceptor } from './helpers/jwt.interceptor.spec';
 import { ErrorInterceptor } from './helpers/error.interceptor';
 import { LoginComponent } from './components/login/login.component';
+import { RegisterComponent } from './components/register/register.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { LoginComponent } from './components/login/login.component';
     NavComponent,
     FooterComponent,
     LoginComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
