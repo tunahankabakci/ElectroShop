@@ -4,6 +4,10 @@
 a {
   text-decoration: none;
 }
+li a {
+  font-family: "Montserrat";
+  font-weight: 600;
+}
 /*----------------------------*\
       Logo
 \*----------------------------*/
